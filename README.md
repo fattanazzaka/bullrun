@@ -1,16 +1,9 @@
-# bullrun
+## BullRun
+BullRun adalah aplikasi mobile berbasis Flutter untuk memantau pergerakan pasar saham secara real-time menggunakan Alpha Vantage API. Fitur yang tersedia meliputi daftar saham trending, pencarian saham, watchlist pribadi, grafik harga interaktif dengan 5 timeframe (1D, 1W, 1M, 1Y, All), detail perusahaan lengkap beserta statistik keuangannya, serta berita pasar terkini dengan analisis sentimen Bullish/Bearish/Neutral. Aplikasi ini dibangun menggunakan beberapa package utama yaitu http untuk komunikasi dengan API, fl_chart untuk visualisasi grafik, provider untuk state management, shared_preferences untuk menyimpan watchlist secara lokal, shimmer untuk loading skeleton, dan url_launcher untuk membuka berita di browser.
 
-A new Flutter project.
+## Lesson Learned
+Sebelum project ini, saya hanya mengenal Flutter dari mata kuliah PBP, widget dasar, stateful/stateless, dan navigasi sederhana. Join RISTEK memaksa saya untuk memberanikan diri explore dan melangkah jauh ke depan.
+Pelajaran terbesar secara teknis adalah mengintegrasikan API ke dalam aplikasi nyata. Ini adalah pertama kalinya saya bekerja langsung dengan REST API, karena sebelumnya saya hanya mengambil API dari project django, sekarang saya harus belajar mulai dari memahami struktur endpoint dari dokumentasinya, parsing JSON response, hingga menangani error di tengah keterbatasan account free alpha vantage saya.
+Di sisi lain, saya juga belajar pentingnya arsitektur yang terstruktur, memisahkan models, services, providers, dan screens. Sehingga pengerjaan jauh lebih terstruktur dan terorganisir
+Namun pelajaran yang tidak terduga justru bukan tentang segi teknikal. Minggu pengerjaan deadline RISTEK ini adalah minggu yang cukup padat, deadline dari beberapa mata kuliah dan kuis datang bersamaan. Ada momen di mana saya berpikir apakah saya mau mengerjakan opsi 1/2 saja karena sudah pernah di PBP dan itu adalah zona nyaman saya. Tapi saya memilih tetap optimis dan bergerak ke luar zona nyaman saya, hal ini menjadi pengalaman berharga saya untuk selalu mulai dulu daripada terlalu banyak berpikir namun minim aksi.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
