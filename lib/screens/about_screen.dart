@@ -18,7 +18,6 @@ class _Profile {
     {'label': 'Student',       'icon': Icons.school_outlined},
   ];
 
-  // Social media links
   static const List<Map<String, String>> socials = [
     {'platform': 'Instagram', 'handle': '@ftn.azzaka', 'url': 'https://instagram.com/ftn.azzaka'},
     {'platform': 'LinkedIn',  'handle': 'linkedin.com/in/muhammad-fattan-azzaka', 'url': 'https://www.linkedin.com/in/muhammad-fattan-azzaka-bb5456210/'},
@@ -53,7 +52,6 @@ class AboutScreen extends StatelessWidget {
       child: Stack(
         fit: StackFit.expand,
         children: [
-          // Background foto
           _Profile.photoAsset != null
               ? Image.asset(_Profile.photoAsset!, fit: BoxFit.cover)
               : Container(
@@ -69,7 +67,6 @@ class AboutScreen extends StatelessWidget {
                   ),
                 ),
 
-          // Gradient overlay — gelap di bawah agar teks terbaca
           Positioned.fill(
             child: DecoratedBox(
               decoration: BoxDecoration(
@@ -87,7 +84,6 @@ class AboutScreen extends StatelessWidget {
             ),
           ),
 
-          // Nama + badge di atas foto
           Positioned(
             left: 20,
             right: 20,
@@ -95,7 +91,6 @@ class AboutScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // Nama + umur
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.baseline,
                   textBaseline: TextBaseline.alphabetic,
@@ -129,7 +124,6 @@ class AboutScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 8),
 
-                // Badge jurusan — pill gelap transparan
                 Container(
                   padding: const EdgeInsets.symmetric(
                       horizontal: 12, vertical: 5),
@@ -173,7 +167,6 @@ class AboutScreen extends StatelessWidget {
     );
   }
 
-  // ── MY BASICS ────────────────────────────────────────────────────────────
   Widget _buildBasicsSection() {
     return Padding(
       padding: const EdgeInsets.fromLTRB(20, 24, 20, 20),
@@ -221,7 +214,6 @@ class AboutScreen extends StatelessWidget {
     );
   }
 
-  // ── ABOUT ME ─────────────────────────────────────────────────────────────
   Widget _buildAboutSection() {
     return Padding(
       padding: const EdgeInsets.fromLTRB(20, 20, 20, 20),
@@ -244,7 +236,6 @@ class AboutScreen extends StatelessWidget {
     );
   }
 
-  // ── SOCIAL MEDIA ─────────────────────────────────────────────────────────
   Widget _buildSocialsSection() {
     return Padding(
       padding: const EdgeInsets.fromLTRB(20, 20, 20, 20),
