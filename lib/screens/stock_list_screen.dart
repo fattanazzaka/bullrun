@@ -207,7 +207,7 @@ class _StockListScreenState extends State<StockListScreen>
         tabs: const [
           Tab(text: 'Watchlist'),
           Tab(text: 'Trending'),
-          Tab(text: 'All Stocks'),
+          Tab(text: 'Popular'),
         ],
       ),
     );
@@ -219,7 +219,7 @@ class _StockListScreenState extends State<StockListScreen>
       children: [
         _buildWatchlistTab(),
         _buildTrendingTab(),
-        _buildAllStocksTab(),
+        _buildPopularStocksTab(),
       ],
     );
   }
@@ -295,7 +295,6 @@ class _StockListScreenState extends State<StockListScreen>
 
     final gainers = _movers['gainers'] ?? [];
     final losers = _movers['losers'] ?? [];
-    final active = _movers['active'] ?? [];
 
     if (gainers.isEmpty && losers.isEmpty) {
       return Center(
@@ -318,11 +317,10 @@ class _StockListScreenState extends State<StockListScreen>
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          _buildMoverSection('🚀 Top Gainers', gainers, true),
+          _buildMoverSection('Top Gainers', gainers, true),
           const SizedBox(height: 20),
-          _buildMoverSection('📉 Top Losers', losers, false),
+          _buildMoverSection('Top Losers', losers, false),
           const SizedBox(height: 20),
-          _buildMoverSection('⚡ Most Active', active, null),
         ],
       ),
     );
@@ -357,7 +355,7 @@ class _StockListScreenState extends State<StockListScreen>
     );
   }
 
-  Widget _buildAllStocksTab() {
+  Widget _buildPopularStocksTab() {
     if (_loadingDefault) return _buildShimmerList();
 
     if (_error != null) {
