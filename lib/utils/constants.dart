@@ -1,5 +1,3 @@
-// lib/utils/constants.dart
-
 class AppConstants {
   static const String apiKey = 'X3FDBXCMMJZ8K0SD';
 
